@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Working with RegExp Object</h2>
+
+<p id="output"></p>
+
+<script>
+var pattern = /hello/gi;   // pattern with global(g) and ignoreCase(i) flags
+var text = "Hello world! hello everyone.";
+
+// --- Using RegExp methods ---
+var result1 = pattern.test(text);     // checks if pattern exists
+var result2 = text.match(pattern);    // returns all matches
+var result3 = text.search(pattern);   // returns index of first match
+// --- Using RegExp properties ---
+var info = "Pattern: " + pattern.source + "<br>" +
+           "Global flag: " + pattern.global + "<br>" +
+           "Ignore Case flag: " + pattern.ignoreCase + "<br>" +
+           "Multiline flag: " + pattern.multiline + "<br><br>" +
+           "Using test(): " + result1 + "<br>" +
+           "Using match(): " + result2 + "<br>" +
+           "Using search(): " + result3;
+
+document.getElementById("output").innerHTML = info;
+</script>
+
+</body>
+</html>
